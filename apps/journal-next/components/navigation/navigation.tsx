@@ -1,5 +1,7 @@
 import React from 'react';
 import { Navbar, Link, Text, Dropdown, Avatar, Badge } from '@nextui-org/react';
+import { RiLogoutCircleRLine } from '@react-icons/all-files/ri/RiLogoutCircleRLine';
+import { RiSettingsLine } from '@react-icons/all-files/ri/RiSettingsLine';
 
 export function Navigation() {
   return (
@@ -7,10 +9,10 @@ export function Navigation() {
       <Navbar.Toggle showIn='xs' aria-label='toggle navigation' />
 
       <Navbar.Content hideIn='xs' variant='highlight-rounded' enableCursorHighlight>
-        <Navbar.Link isActive href='#'>Features</Navbar.Link>
-        <Navbar.Link href='#'>Customers</Navbar.Link>
-        <Navbar.Link href='#'>Pricing</Navbar.Link>
-        <Navbar.Link href='#'>Company</Navbar.Link>
+        <Navbar.Link isActive href='#'>Обучающиеся</Navbar.Link>
+        <Navbar.Link href='#'>Группы</Navbar.Link>
+        <Navbar.Link href='#'>Табель</Navbar.Link>
+        <Navbar.Link href='#'>Отчеты</Navbar.Link>
       </Navbar.Content>
 
       <Navbar.Content>
@@ -30,38 +32,31 @@ export function Navigation() {
                   as='button'
                   color="gradient"
                   size='md'
-                  src='https://i.pravatar.cc/150?u=a042581f4e29026704d'
+                  text='TU'
+                  textColor='white'
                 />
               </Dropdown.Trigger>
             </Badge>
           </Navbar.Item>
           <Dropdown.Menu
+            disabledKeys={['account']}
             aria-label='User menu actions'
             color='primary'
             onAction={(actionKey) => console.log({ actionKey })}
           >
-            <Dropdown.Item key='profile' css={{ height: '$18' }}>
-              <Text b color='inherit' css={{ d: 'flex' }}>
-                Signed in as
+            <Dropdown.Item key='account' css={{ height: '$20' }}>
+              <Text b css={{ d: 'flex' }}>
+                Test User
               </Text>
-              <Text b color='inherit' css={{ d: 'flex' }}>
-                zoey@example.com
-              </Text>
+              <Badge color="primary" css={{ d: 'flex' }} disableOutline>
+                Учитель
+              </Badge>
             </Dropdown.Item>
-            <Dropdown.Item key='settings' withDivider>
-              My Settings
+            <Dropdown.Item key='settings' withDivider icon={<RiSettingsLine size={20} />}>
+              Настройки
             </Dropdown.Item>
-            <Dropdown.Item key='team_settings'>Team Settings</Dropdown.Item>
-            <Dropdown.Item key='analytics' withDivider>
-              Analytics
-            </Dropdown.Item>
-            <Dropdown.Item key='system'>System</Dropdown.Item>
-            <Dropdown.Item key='configurations'>Configurations</Dropdown.Item>
-            <Dropdown.Item key='help_and_feedback' withDivider>
-              Help & Feedback
-            </Dropdown.Item>
-            <Dropdown.Item key='logout' withDivider color='error'>
-              Log Out
+            <Dropdown.Item key='logout' withDivider color='error' icon={<RiLogoutCircleRLine size={20} />}>
+              Выйти
             </Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
@@ -76,7 +71,7 @@ export function Navigation() {
             }}
             href='#'
           >
-            Features
+            Обучающиеся
           </Link>
         </Navbar.CollapseItem>
         <Navbar.CollapseItem>
@@ -87,7 +82,7 @@ export function Navigation() {
             }}
             href='#'
           >
-            Customers
+            Группы
           </Link>
         </Navbar.CollapseItem>
         <Navbar.CollapseItem>
@@ -98,7 +93,7 @@ export function Navigation() {
             }}
             href='#'
           >
-            Pricing
+            Табель
           </Link>
         </Navbar.CollapseItem>
         <Navbar.CollapseItem>
@@ -109,7 +104,7 @@ export function Navigation() {
             }}
             href='#'
           >
-            Company
+            Отчеты
           </Link>
         </Navbar.CollapseItem>
       </Navbar.Collapse>
