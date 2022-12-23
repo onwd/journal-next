@@ -1,7 +1,7 @@
 import { Navigation } from '../../components/navigation/navigation';
 import styles from './index.module.scss';
 
-export function Reports() {
+export function ReportsPage() {
   return (
     <div className={styles.page}>
       Reports
@@ -10,11 +10,11 @@ export function Reports() {
 }
 
 // TODO: create reusable layouts
-Reports.getLayout = (page: JSX.Element) => (
+ReportsPage.getLayout = (page: JSX.Element) => (
   <>
     <Navigation />
     {page}
   </>
 );
 
-export default Reports;
+export default ReportsPage;

@@ -1,7 +1,7 @@
 import { Navigation } from '../../components/navigation/navigation';
 import styles from './index.module.scss';
 
-export function Groups() {
+export function GroupsPage() {
   return (
     <div className={styles.page}>
       Groups
@@ -10,11 +10,11 @@ export function Groups() {
 }
 
 // TODO: create reusable layouts
-Groups.getLayout = (page: JSX.Element) => (
+GroupsPage.getLayout = (page: JSX.Element) => (
   <>
     <Navigation />
     {page}
   </>
 );
 
-export default Groups;
+export default GroupsPage;

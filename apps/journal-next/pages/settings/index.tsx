@@ -1,7 +1,7 @@
 import { Navigation } from '../../components/navigation/navigation';
 import styles from './index.module.scss';
 
-export function Settings() {
+export function SettingsPage() {
   return (
     <div className={styles.page}>
       Settings
@@ -10,11 +10,11 @@ export function Settings() {
 }
 
 // TODO: create reusable layouts
-Settings.getLayout = (page: JSX.Element) => (
+SettingsPage.getLayout = (page: JSX.Element) => (
   <>
     <Navigation />
     {page}
   </>
 );
 
-export default Settings;
+export default SettingsPage;
