@@ -4,6 +4,7 @@ import styles from './index.module.scss';
 export function Attendance() {
   return (
     <div className={styles.page}>
+      Attendance
     </div>
   );
 }

@@ -4,6 +4,7 @@ import styles from './index.module.scss';
 export function Settings() {
   return (
     <div className={styles.page}>
+      Settings
     </div>
   );
 }

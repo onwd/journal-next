@@ -4,6 +4,7 @@ import styles from './index.module.scss';
 export function Groups() {
   return (
     <div className={styles.page}>
+      Groups
     </div>
   );
 }
