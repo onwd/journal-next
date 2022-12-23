@@ -1,7 +1,7 @@
-import { Navigation } from '../components/navigation/navigation';
+import { Navigation } from '../../components/navigation/navigation';
 import styles from './index.module.scss';
 
-export function Index() {
+export function Attendance() {
   return (
     <div className={styles.page}>
     </div>
@@ -9,11 +9,11 @@ export function Index() {
 }
 
 // TODO: create reusable layouts
-Index.getLayout = (page: JSX.Element) => (
+Attendance.getLayout = (page: JSX.Element) => (
   <>
     <Navigation />
     {page}
   </>
 );
 
-export default Index;
+export default Attendance;
