@@ -1,11 +1,11 @@
+import { Container } from '@nextui-org/react';
 import { Navigation } from '../../components/navigation/navigation';
-import styles from './index.module.scss';
 
 export function SettingsPage() {
   return (
-    <div className={styles.page}>
+    <Container lg>
       Settings
-    </div>
+    </Container>
   );
 }
 
