@@ -75,7 +75,10 @@ export function IndexPage() {
           />
 
           <Dropdown>
-            <Dropdown.Button light={selectedYearKey === 'any'}>
+            <Dropdown.Button
+              light={selectedYearKey === 'any'}
+              flat={selectedYearKey !== 'any'}
+            >
               {selectedYearText}
             </Dropdown.Button>
             <Dropdown.Menu
@@ -94,7 +97,10 @@ export function IndexPage() {
           </Dropdown>
 
           <Dropdown>
-            <Dropdown.Button light={selectedGroupKey === 'any'}>
+            <Dropdown.Button
+              light={selectedGroupKey === 'any'}
+              flat={selectedGroupKey !== 'any'}
+            >
               {selectedGroupText}
             </Dropdown.Button>
             <Dropdown.Menu
@@ -112,7 +118,10 @@ export function IndexPage() {
           </Dropdown>
 
           <Dropdown>
-            <Dropdown.Button light={selectedStatusKey === 'any'}>
+            <Dropdown.Button
+              light={selectedStatusKey === 'any'}
+              flat={selectedStatusKey !== 'any'}
+            >
               {selectedStatusText}
             </Dropdown.Button>
             <Dropdown.Menu
