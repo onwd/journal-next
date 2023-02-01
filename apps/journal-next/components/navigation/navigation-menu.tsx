@@ -22,7 +22,7 @@ export function NavigationMenu() {
     {
       id: 3,
       href: '/attendance',
-      title: 'Табель'
+      title: 'Посещаемость'
     },
     {
       id: 4,
