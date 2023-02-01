@@ -6,6 +6,7 @@ import { useMemo, useState } from 'react';
 import { Navigation } from '../components/navigation/navigation';
 
 export function IndexPage() {
+  const [query, setQuery] = useState('');
   const [selectedYear, setSelectedYear] = useState(new Set(['any']));
   const [selectedGroup, setSelectedGroup] = useState(new Set(['any']));
   const [selectedStatus, setSelectedStatus] = useState(new Set(['any']));
@@ -67,11 +68,14 @@ export function IndexPage() {
       <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem' }}>
         <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
           <Input
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
             placeholder='Поиск по имени...'
             clearable
             shadow={false}
             contentLeft={<RiSearchLine size={20} />}
             width='300px'
+            status={(query.length === 0) ? 'default' : 'primary'}
           />
 
           <Dropdown>
