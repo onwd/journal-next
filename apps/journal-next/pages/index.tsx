@@ -1,10 +1,21 @@
 import { Badge, Button, Container, Spacer, Table } from '@nextui-org/react';
 import { Navigation } from '../components/navigation/navigation';
+import { RiAddLine } from '@react-icons/all-files/ri/RiAddLine';
+import { RiEditLine } from '@react-icons/all-files/ri/RiEditLine';
 
 export function IndexPage() {
   return (
     <Container lg>
       <Spacer y={2} />
+
+      <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+        <Button auto icon={<RiAddLine size={20} />}>
+          Создать
+        </Button>
+      </div>
+
+      <Spacer y={0.5} />
+
       <Table
         aria-label='Example table with static content'
         lined
@@ -23,7 +34,7 @@ export function IndexPage() {
             </Table.Cell>
             <Table.Cell>
               <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-                <Button>
+                <Button flat auto size='sm' icon={<RiEditLine size={20} />}>
                   Редактировать
                 </Button>
               </div>
@@ -37,7 +48,7 @@ export function IndexPage() {
             </Table.Cell>
             <Table.Cell>
               <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-                <Button>
+                <Button flat auto size='sm' icon={<RiEditLine size={20} />}>
                   Редактировать
                 </Button>
               </div>
