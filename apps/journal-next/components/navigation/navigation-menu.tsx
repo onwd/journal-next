@@ -31,9 +31,10 @@ export function NavigationMenu() {
     }
   ], []);
 
-  const isOneOfLinksSelected = useMemo(() => {
-    return links.some((link) => pathname === link.href);
-  }, [pathname]);
+  const isOneOfLinksSelected = useMemo(
+    () => links.some((link) => pathname === link.href),
+    [pathname]
+  );
 
   // useEffect(() => {
   //   setIsCollapseOpen(false);
@@ -58,7 +59,11 @@ export function NavigationMenu() {
         aria-label='toggle navigation'
       />
 
-      <Navbar.Content hideIn='xs' variant='highlight-rounded' enableCursorHighlight={isOneOfLinksSelected}>
+      <Navbar.Content
+        enableCursorHighlight={isOneOfLinksSelected}
+        hideIn='xs'
+        variant='highlight-rounded'
+      >
         {links.map((link) => (
           <NavigationLink key={link.id} href={link.href}>
             {link.title}
@@ -66,7 +71,10 @@ export function NavigationMenu() {
         ))}
       </Navbar.Content>
 
-      <Navbar.Collapse showIn='xs'/* isOpen={isCollapseOpen}*/>
+      <Navbar.Collapse
+        // isOpen={isCollapseOpen}
+        showIn='xs'
+      >
         {links.map((link) => (
           <NavigationCollapseLink key={link.id} href={link.href}>
             {link.title}
